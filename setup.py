@@ -2,22 +2,41 @@
 
 from setuptools import setup, find_packages
 
+DESCRIPTION = 'A library for algorithmic composition.'
+DESCRIPTION_LONG = """A library for algorithmic composition. Chromatic provides
+			a framework for combining the results of algorithmic generation and
+			modification of music in a similar way to synths & effects in the 
+			production process."""
 
-with open('README.rst') as f:
-    readme = f.read()
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Environment :: Console',
+    'Environment :: Web Environment',
+    'Intended Audience :: End Users/Desktop',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Topic :: Multimedia :: Sound/Audio',
+    'Topic :: Multimedia :: Sound/Audio :: MIDI',
+    'Topic :: Artistic Software',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+]
 
-with open('LICENSE') as f:
-    license = f.read()
-
-setup(
-    name='sample',
-    version='0.0.1',
-    description='Sample package for Python-Guide.org',
-    long_description=readme,
-    author='Kenneth Reitz',
-    author_email='me@kennethreitz.com',
-    url='https://github.com/kennethreitz/samplemod',
-    license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
-)
-
+if __name__ == '__main__':
+    setuptools.setup(
+        name='chromatic',
+        version='0.0.1',
+        description=DESCRIPTION,
+        long_description=DESCRIPTION_LONG,
+        author='Henry Franks',
+        author_email='hpwfranks@googlemail.com',
+        license='MIT',
+        url='https://github.com/henreh/chromatic',
+        classifiers=classifiers,
+        packages=setuptools.find_packages(exclude=[]),
+    )

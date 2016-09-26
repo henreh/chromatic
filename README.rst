@@ -1,6 +1,4 @@
-Sample Module Repository
+chromatic -- composition with code
 ========================
 
-This simple project is an example repo for Python projects.
-
-`Learn more <http://www.kennethreitz.org/essays/repository-structure-and-python>`_.
+Currently alpha. 
